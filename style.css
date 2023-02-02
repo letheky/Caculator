@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    max-width:100vw;
+    max-height:100vh;
+}
+
+div{
+    border-radius: 2%;
+}
+
+button{
+    border-radius: 5%;
+    border:1px solid #333;
+}
+
+button:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    transition:0.4s;
+}
+.container{
+    display:grid;
+    grid-template-areas: 
+    "a a a a"
+    "b b c c"
+    "d d d d"
+    "d d d d"
+    "d d d d"
+    "d d d d";
+    background-color: rgba(107, 105, 105, 0.3);
+    place-items: center;
+    width:300px;
+    height:400px;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    transform:scale(1.2);
+    padding:20px 20px;
+}
+.container>.screen{
+    grid-area:a;
+    width:95%;
+    height:60px;
+    border:1px solid black;  
+    position:relative
+}
+.screen p{
+    position: absolute;
+    right:0;
+    margin-right: 5px;
+    font-size: 24px;
+}
+.output{
+    bottom:0;
+}
+.result{
+    top:0;
+}
+
+.container>.btn-primary:nth-child(2){
+    grid-area: b;
+    background-color: rgba(207, 53, 53, 0.3);
+    font-weight: bold;
+}
+.container>.btn-primary:nth-child(3){
+    grid-area: c;
+    background-color: rgba(55, 174, 179, 0.3);
+    font-weight: bold;
+}
+.container>.btn-secondary:nth-child(){
+    grid-area: d;
+}
+
+.btn-primary{
+    width:90%;
+    line-height: 40px;
+}
+
+.btn-secondary{
+    width:80%;
+    line-height: 40px;
+    background-color: rgba(105, 107, 102, 0.3);
+}
